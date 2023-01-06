@@ -1,0 +1,221 @@
+@import url('https://fonts.googleapis.com/css2?family=Itim&family=Kenia&display=swap');
+
+
+:root {
+  /* color */
+  --primaryColor: #47E59D;
+  --unCompleteTaskColor: #A09E9E;
+  --completedTaskColor: #D7D7D7;
+  --whiteColor: #FFFDFD;
+  --greyColor: #CECECE;
+
+  /* Font size */
+  --titleFontSize: 2rem;
+  --subTitleFontSize: 1.25rem;
+  --todoFontSize: 1rem;
+  --todoSubmitFontSize: 0.938rem;
+
+  /* shadow */
+  --containerTodo: 2px 2px 25px 10px rgba(0, 0, 0, 0.25);
+  --containerCompleteTodoShadow: 0px 3px 20px 5px rgba(0, 0, 0, 0.25);
+
+  /* fonts */
+  --mainFont: 'Itim', cursive;
+
+  --submitTodoFont: 'Istok Web', sans-serif;
+}
+
+body {
+  font-family: var(--mainFont);
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+.todo__container {
+  position: relative;
+  width: 600px;
+  max-width: 600px;
+  min-height: 400px;
+  border-radius: 10px;
+  background: #fff;
+  box-shadow: 2px 2px 25px 10px rgba(0, 0, 0, 0.25);
+  padding: 25px 0;
+}
+
+.todo__header_container {
+  color: var(--primaryColor);
+  font-size: var(--titleFontSize);
+}
+
+.todo__header_container h1 {
+  font-size: var(--titleFontSize);
+}
+
+.todo__header_container p {
+  margin-top: -13px;
+  font-size: var(--subTitleFontSize);
+}
+
+/* Uncompleted todo list container */
+.todo__uncompleted_container {
+  width: 100%;
+  box-shadow: 0px 3px 20px 5px rgba(0, 0, 0, 0.25);
+}
+
+
+.todo__list {
+  border-top: 1px solid var(--greyColor);
+  border-bottom: 1px solid var(--greyColor);
+  height: 50px;
+}
+
+.todo__checklist_icon {
+  padding: 14px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  border-right: 1px solid var(--greyColor);
+  /* outline: var(--greyColor) solid 1px; */
+}
+
+.todo__checklist_icon i {
+  font-size: 30px;
+  color: var(--greyColor);
+  cursor: pointer;
+}
+
+.todo__checklist_icon i:hover {
+  color: var(--primaryColor);
+}
+
+
+.todo__delete_icon {
+  padding: 14px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+}
+
+.todo__delete_icon i {
+  font-size: 35px;
+  color: var(--greyColor);
+  cursor: pointer;
+}
+
+.todo__delete_icon i:hover {
+  color: rgba(239, 34, 195, 0.985);
+}
+
+.todo__text,
+.uncheck_text,
+.checked_text {
+  margin-right: auto;
+  padding-left: 18px;
+}
+
+.uncheck_text span {
+  color: var(--unCompleteTaskColor);
+  line-height: 19px;
+  font-weight: 400;
+  font-size: var(--todoFontSize);
+  letter-spacing: 0.1em;
+}
+
+.custom-toolkit {
+  background: var(--primaryColor) !important;
+}
+
+.todo__uncompleted_container .uncheck_text span {
+  cursor: pointer;
+}
+
+/* complete todo */
+.todo__completed_container {
+  margin-bottom: 4rem;
+}
+
+.todo__checklist_icon .icon_checked {
+  color: var(--primaryColor);
+}
+
+.checked_text span {
+  text-decoration: line-through;
+  color: var(--completedTaskColor)
+}
+
+/* form todo */
+
+.todo__form {
+  position: absolute;
+  background: var(--primaryColor);
+  padding: 13px 20px;
+  bottom: 0px;
+  /* right: -1px; */
+  width: 100%;
+  border-radius: 0 0 10px 10px;
+  border: 0;
+  z-index: 99;
+
+}
+
+.todo__form input {
+  text-indent: 10px;
+  width: 100%;
+  margin-left: 20px;
+  margin-right: 20px;
+  font-family: var(--submitTodoFont);
+  font-weight: 400;
+  font-style: italic;
+  font-size: var(--todoSubmitFontSize);
+}
+
+.todo__form input,
+.todo__form input:focus {
+  background: none;
+  border: none;
+  outline: none;
+  color: var(--whiteColor);
+}
+
+::placeholder {
+  color: var(--whiteColor);
+  font-family: var(--submitTodoFont);
+  font-weight: 400;
+  font-style: italic;
+  font-size: var(--todoSubmitFontSize);
+}
+
+:-ms-input-placeholder {
+  color: var(--whiteColor);
+  font-family: var(--submitTodoFont);
+  font-weight: 400;
+  font-style: italic;
+  font-size: var(--todoSubmitFontSize);
+}
+
+.todo__form button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: none;
+  margin-right: 20px;
+  border: none
+}
+
+.todo__form button i {
+  /* align-items: center; */
+  font-size: var(--subTitleFontSize);
+  color: var(--whiteColor)
+}
+
+
+/* todo loading */
+.todo__loading {
+  height: 200px;
+}
+
+.todo__loading p {
+  color: var(--primaryColor);
+  font-size: var(--titleFontSize);
+}
