@@ -112,6 +112,7 @@ body {
 .checked_text {
   margin-right: auto;
   padding-left: 18px;
+  text-align: left;
 }
 
 .uncheck_text span {

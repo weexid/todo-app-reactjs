@@ -51,7 +51,7 @@ function List({ check, todos, refetching, edit, setEdit }) {
                 </div>
 
                 <div className='todo_text checked_text' >
-                    <span> {todo}</span>
+                    <span>{todo}</span>
                 </div>
 
                 <div className='todo__delete_icon'>
